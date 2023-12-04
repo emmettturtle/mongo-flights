@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/flights" method="POST">
+  <label>Airline:</label>
+  <select name="airline">
+    <option value="American">American</option>
+    <option value="United">United</option>
+    <option value="Southwest">Southwest</option>
+    <option value="Air Lingus">Air Lingus</option>
+  </select>
+  <br>
+  <label>Airport:</label>
+  <select name="airport">
+    <option value="AUS">AUS</option>
+    <option value="SFO">SFO</option>
+    <option value="DFW">DFW</option>
+    <option value="JFK">JFK</option>
+    <option value="DEN">DEN</option>
+    <option value="LAX">LAX</option>
+  </select>
+  <br>
+  <label>Flight Number (between 10 and 9999):</label>
+  <input type="text" name="flightNo">
+  <br>
+  <label>Depart Date:</label>
+  <input type="datetime-local" name="departs">
+  <br>
+  <input type="submit" value="Add Flight">
+</form>
+
+<%- include('../partials/footer') %>
